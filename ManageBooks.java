@@ -177,10 +177,9 @@ public class ManageBooks {
      * A method buildLL that takes an array of items of type Book, and 
      * returns a linked list of all the Book items in the array
      *********************************************************************/
-    public static BooksLL buildLL(Book[] myBooks) {
-        // add your code here
-        
-    }
+    /*public static BooksLL buildLL(Book[] myBooks) {
+           // add your code here
+    }*/
     
     /*********************************************************************
      * A method chronoLLinsert that takes:
@@ -228,6 +227,10 @@ public class ManageBooks {
 
         System.out.println("_____________________");
         System.out.println("Number of enjoyed books (recursive): " + enjoyed(myBooks));
+
+        Book tempBook = new Book();//test
+        BookLL myBookListItem = new BookLL(myBooks[i], theNext);//test
+
 
     }
 } 
