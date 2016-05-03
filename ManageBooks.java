@@ -21,7 +21,6 @@ public class ManageBooks {
             numOfLines++;
         }
 
-
         textReader.reset();
         Book[] myBooks = new Book[numOfLines];
         String title = "";
@@ -106,7 +105,6 @@ public class ManageBooks {
             myBooks[i].setEnjoyed(myBooks[indexLeastRecent].getEnjoyed());
             myBooks[indexLeastRecent].setEnjoyed(tempBook.getEnjoyed());
 
-
             myBooks[i].Print();
             System.out.println("___");//test
 
@@ -179,7 +177,11 @@ public class ManageBooks {
      *********************************************************************/
     public static BooksLL buildLL(Book[] myBooks) {
         // add your code here
-        myBookListItem = new BookLL(myBooks[1], null);//test
+        BooksLL[] tempBooksLL = new BooksLL [tempBooksLL.lengthl];
+
+        BooksLL tempBooksLL = new BooksLL(myBooks[1]);
+        tempBooksLL.printLL();
+        return tempBooksLL;
     }
 
     /*********************************************************************
@@ -230,6 +232,7 @@ public class ManageBooks {
         System.out.println("Number of enjoyed books (recursive): " + enjoyed(myBooks));
 
         System.out.println("_____________________");
+        System.out.println("Building link list:\n");
         System.out.println(buildLL(myBooks));
 
     }

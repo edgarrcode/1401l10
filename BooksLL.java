@@ -13,6 +13,11 @@ public class BooksLL {
         myBook = theMyBook;
         next = theNext;
     }
+
+    public BooksLL (Book theMyBook) {
+        myBook = theMyBook;
+        next = null;
+    }
     
     // Accessors
     public Book getMyBook() {
@@ -30,11 +35,11 @@ public class BooksLL {
     public void setNext (BooksLL theNext) {
         next = theNext;
     }
-    
+
     /*******************************************************************
      * Other methods
      *******************************************************************/
-    
+
     // A (non static) method, printLL, that prints a linked list
     public void printLL() {
         // add your code here
@@ -45,7 +50,7 @@ public class BooksLL {
             next.printLL();
         }
     }
-    
+
     // A (non static) method, sizeLL, that returns the number of items in 
     // the list
     public int sizeLL() {
