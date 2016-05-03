@@ -29,8 +29,8 @@ public class ManageBooks {
         int pages = 0;
         int pubDate = 0;
         double price = 0.0;
-        boolean enjoyed = false;
-        
+        boolean enjoyed = true;
+
         for (int i = 0; i < numOfLines; i++) {
             String[] line = textReader.readLine().split(";");
             title = line[0];
@@ -39,12 +39,7 @@ public class ManageBooks {
             pages = Integer.parseInt(line[2]);
             pubDate = Integer.parseInt(line[3]);
             price = Double.parseDouble(line[4]);
-            if (line[5].equals("true")) {
-                enjoyed = true;
-            }
-            if (line[5].equals("false")) {
-                enjoyed = false;
-            }
+            enjoyed = Boolean.parseBoolean(line[5]);
 
             myBooks[i] = new Book (title, authors, pages, pubDate, price, enjoyed);
 
@@ -147,7 +142,15 @@ public class ManageBooks {
      * returns the number of books in the array that you enjoyed.
      *********************************************************************/
     public static int enjoyed(Book[] myBooks) {
-        // add your code here        
+        // add your code here
+        int counter = 0;
+        for (int i = 0; i < myBooks.length; i++) {
+            if (myBooks[i].getEnjoyed()) {
+                counter++;
+            }
+        }
+
+        return counter;
     }
     
     /*********************************************************************
@@ -155,17 +158,29 @@ public class ManageBooks {
      * type Book and an integer n, and returns the number of books in the 
      * array that you enjoyed, starting at index n in the array.
      *********************************************************************/
-    /*public static int recEnjoyed(Book[] myBooks, int n) {
-           // add your code here        
-    }*/
+    public static int recEnjoyed(Book[] myBooks, int n) {
+        // add your code here
+        int counter = 0;
+        if (myBooks.length == 0) {
+            return 0;
+        }
+
+        if ( myBooks[n].getEnjoyed() ) {
+            counter++;
+        }
+
+        return counter + recEnjoyed(myBooks, (n + 1));
+
+    }
     
     /*********************************************************************
      * A method buildLL that takes an array of items of type Book, and 
      * returns a linked list of all the Book items in the array
      *********************************************************************/
-    /*public static BooksLL buildLL(Book[] myBooks) {
-           // add your code here        
-    }*/
+    public static BooksLL buildLL(Book[] myBooks) {
+        // add your code here
+        
+    }
     
     /*********************************************************************
      * A method chronoLLinsert that takes:
@@ -177,7 +192,7 @@ public class ManageBooks {
      * the resulting list is sorting in ascending chronological order.
      *********************************************************************/
     /*public static void chronoLLinsert(BooksLL myBooks, Book B) {
-           // add your code here            
+           // add your code here    
     }*/
     
      /*********************************************************************
@@ -194,6 +209,7 @@ public class ManageBooks {
 
         Book[] myBooks = readFromFile(filename);
 
+        System.out.println("Printing books...\n");
         for (i = 0; i < myBooks.length; i++) {
             myBooks[i].Print();
             System.out.println("___");
@@ -204,8 +220,14 @@ public class ManageBooks {
         sortByPublicationDate(myBooks);
 
         System.out.println("_____________________");
-        System.out.println("Printing cheapest book: ");
+        System.out.println("Printing cheapest book:\n");
         cheapest(myBooks).Print();
+
+        System.out.println("_____________________");
+        System.out.println("Number of enjoyed books: " + enjoyed(myBooks));
+
+        System.out.println("_____________________");
+        System.out.println("Number of enjoyed books (recursive): " + enjoyed(myBooks));
 
     }
 } 

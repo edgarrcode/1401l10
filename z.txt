@@ -1,5 +1,5 @@
 The Power of Algorithms: Inspiration and Examples in Everyday Life;Giorgio Ausiello, Rossella Petreschi;255;20131109;40.08;true
 A philosophical essay on probabilities;P. S. Laplace;342;20080910;54.21;false
-The obssesion;Nora Roberts;40;20151110;15.88;true 
+The obssesion;Nora Roberts;40;20151110;15.88;true
 The Sixth Extinction: An Unnatural History;Elizabeth Kolbert;319;20140327;18.76;false
-The Whole30: The 30-Day Guide to Total Health and Food Freedom;Melissa Hartwig, Dallas Hartwig;420;20150118;18.00;true 
+The Whole30: The 30-Day Guide to Total Health and Food Freedom;Melissa Hartwig, Dallas Hartwig;420;20150118;18.00;true
