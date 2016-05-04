@@ -56,7 +56,6 @@ public class BooksLL {
     // the list
     public int sizeLL() {
         //add your code here
-        //while and iterate in a temp ll
         BooksLL temp = this;
         int counter = 0;
 
@@ -73,13 +72,31 @@ public class BooksLL {
     // of items in the list
     public int sizeLLR() {
         // add your code here
+        BooksLL temp = this;
+        int counter = 0;
+
+        if (temp.next == null) {
+            return counter + 1;
+        }
+
+        counter++;
+        return counter + next.sizeLLR();
     }
 
     // A (non static) method, addTail, that takes a new book B and modifies 
     // the original list where B has been added as the last node in the list.
-    /*public void addTail(BooksLL B) {
+    public void addTail(BooksLL B) {
         // add your code here
-    }*/
+        BooksLL temp = this;
+
+        while (temp.getNext() != null) {
+            temp = temp.next;
+        }
+
+        temp.next = B;
+
+        return;
+    }
     
     // Bonus 1: A (non static) method, removeHead, that modifies the original list by cropping out its first node
     
