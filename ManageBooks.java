@@ -245,7 +245,7 @@ public class ManageBooks {
 
         System.out.println("_____________________");
         System.out.println("Counting size of linked list:\n");
-        myListOfBooks.sizeLL();
+        System.out.println(myListOfBooks.sizeLL());
 
     }
 } 

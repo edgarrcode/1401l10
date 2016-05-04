@@ -57,26 +57,23 @@ public class BooksLL {
     public int sizeLL() {
         //add your code here
         //while and iterate in a temp ll
+        BooksLL temp = this;
         int counter = 0;
 
-        while (next != null) {
-            if (myBook != null) {
-                counter++;
-            }
-            if(next != null) {
-                getNext();
-            }
+        while (temp != null) {
+            temp = temp.next;
+            counter++;
         }
 
-        return 0;
+        return counter;
 
     }
     
     // A (non static) recursive method, sizeLLR, that returns the number 
     // of items in the list
-    /*public int sizeLLR() {
+    public int sizeLLR() {
         // add your code here
-    }*/
+    }
 
     // A (non static) method, addTail, that takes a new book B and modifies 
     // the original list where B has been added as the last node in the list.
