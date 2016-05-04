@@ -45,6 +45,7 @@ public class BooksLL {
         // add your code here
         if (myBook != null) {
             myBook.Print();
+            System.out.println("\n");
         }
         if(next != null) {
             next.printLL();
@@ -56,7 +57,19 @@ public class BooksLL {
     public int sizeLL() {
         //add your code here
         //while and iterate in a temp ll
+        int counter = 0;
+
+        while (next != null) {
+            if (myBook != null) {
+                counter++;
+            }
+            if(next != null) {
+                getNext();
+            }
+        }
+
         return 0;
+
     }
     
     // A (non static) recursive method, sizeLLR, that returns the number 

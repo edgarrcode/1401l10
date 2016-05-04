@@ -106,7 +106,7 @@ public class ManageBooks {
             myBooks[indexLeastRecent].setEnjoyed(tempBook.getEnjoyed());
 
             myBooks[i].Print();
-            System.out.println("___");//test
+            System.out.println("\n");//test
 
         }
 
@@ -177,11 +177,18 @@ public class ManageBooks {
      *********************************************************************/
     public static BooksLL buildLL(Book[] myBooks) {
         // add your code here
-        BooksLL[] tempBooksLL = new BooksLL [tempBooksLL.lengthl];
+        BooksLL firstBookOfList = new BooksLL(myBooks[0],null);
 
-        BooksLL tempBooksLL = new BooksLL(myBooks[1]);
-        tempBooksLL.printLL();
-        return tempBooksLL;
+        BooksLL currentBookOfList = firstBookOfList;
+
+        for (int i = 1; i < myBooks.length; i++) {
+            BooksLL newBookOfList = new BooksLL(myBooks[i], null);
+            currentBookOfList.setNext(newBookOfList);
+            currentBookOfList = newBookOfList;
+        }
+
+        return firstBookOfList;
+
     }
 
     /*********************************************************************
@@ -214,7 +221,7 @@ public class ManageBooks {
         System.out.println("Printing books...\n");
         for (i = 0; i < myBooks.length; i++) {
             myBooks[i].Print();
-            System.out.println("___");
+            System.out.println("\n");
         }
 
         System.out.println("_____________________");
@@ -232,8 +239,13 @@ public class ManageBooks {
         System.out.println("Number of enjoyed books (recursive): " + enjoyed(myBooks));
 
         System.out.println("_____________________");
-        System.out.println("Building link list:\n");
-        System.out.println(buildLL(myBooks));
+        System.out.println("Building and printing linked list:\n");
+        BooksLL myListOfBooks = buildLL(myBooks);
+        myListOfBooks.printLL();
+
+        System.out.println("_____________________");
+        System.out.println("Counting size of linked list:\n");
+        myListOfBooks.sizeLL();
 
     }
 } 
