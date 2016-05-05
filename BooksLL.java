@@ -108,6 +108,27 @@ public class BooksLL {
     // an integer n, and modifies the original list where B has been added 
     // as the nth node in the list (or at the end of the list if n is larger 
     // than the size of the list + 1).
+    public void addNth (BooksLL B, int n) {
+        int sizeOfThisList = this.sizeLLR();
+        BooksLL tempCurr = this;
+        BooksLL tempNext = null;
+
+        if (n > sizeOfThisList) {
+            addTail(B);
+        }
+        else {
+            //iterate
+            for (int i = 1; i < n; i++) {
+                System.out.println("enteredfor");
+                tempCurr = next;
+            }
+            //insert
+            tempNext = tempCurr.next;
+            tempCurr.setNext(B);
+            B.setNext(tempNext);
+        }
+
+    }
         
     
 }

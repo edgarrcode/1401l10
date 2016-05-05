@@ -262,6 +262,15 @@ public class ManageBooks {
         myListOfBooks.removeHead();
         myListOfBooks.printLL();
 
+        System.out.println("\n_____________________");
+        System.out.println("Creating newBookForNth:");
+        BooksLL newBookForNth = new BooksLL(myBooks[0],null);
+        System.out.println("newBookForNth:\n");
+        newBookForNth.printLL();
+        System.out.println("Adding BooksLL to nth position and printing");
+        myListOfBooks.addNth(newBookForNth, 2);
+        myListOfBooks.printLL();
+
 
     }
 } 
