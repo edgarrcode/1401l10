@@ -251,10 +251,15 @@ public class ManageBooks {
         System.out.println("Counting size of linked list Recursively:");
         System.out.println(myListOfBooks.sizeLLR());
 
-        System.out.println("\nAdding Tail to myListOfBooks and printing it:");
+        System.out.println("\n_____________________");
+        System.out.println("Adding Tail to myListOfBooks and printing it:");
         BooksLL newFirstListItem = new BooksLL(myBooks[0],null);
-        newFirstListItem.printLL();
         myListOfBooks.addTail(newFirstListItem);
+        myListOfBooks.printLL();
+
+        System.out.println("\n_____________________");
+        System.out.println("Removing Head to myListOfBooks and printing it:");
+        myListOfBooks.removeHead();
         myListOfBooks.printLL();
 
 

@@ -99,6 +99,10 @@ public class BooksLL {
     }
     
     // Bonus 1: A (non static) method, removeHead, that modifies the original list by cropping out its first node
+    public void removeHead () {
+        this.setMyBook(getNext().getMyBook());
+        this.setNext(getNext().getNext());
+    }
     
     // Bonus 2: A (non static) method, addNth, that takes a new book B and 
     // an integer n, and modifies the original list where B has been added 
