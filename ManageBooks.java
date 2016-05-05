@@ -267,8 +267,9 @@ public class ManageBooks {
         BooksLL newBookForNth = new BooksLL(myBooks[0],null);
         System.out.println("newBookForNth:\n");
         newBookForNth.printLL();
-        System.out.println("Adding BooksLL to nth position and printing");
-        myListOfBooks.addNth(newBookForNth, 2);
+        System.out.println("Enter nth");
+        int nth = scnr.nextInt();
+        myListOfBooks.addNth(newBookForNth, nth);
         myListOfBooks.printLL();
 
 

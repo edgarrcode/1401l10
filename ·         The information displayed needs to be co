@@ -1,0 +1,9 @@
+·         The information displayed needs to be consistent in every browser. The information will be consitent in every browser. 
+·         For example, IE does not reflect the changes that you just made. Sometimes when visiting a website, files are stored in the computer’s temporary memory (cache), in order to see the new content, the user needs to clear computer’s cache.  Unfortunately, we don’t have control on what is stored in the local memory of the computer of the users. We can only control what is in our server.
+·         The changes are only reflected in Google Chrome.
+·         When are we transitioning to the new design? I can start now, it should take me two weeks to finish. Here are the remaining steps:
+I will to migrate the test site into the production site
+I will make some QA testing, to make sure the production site is the same as the approved Test site.I will redirect sbs.utep.edu to point the new site.
+·         How soon can you provide us with training and access to maintain our website? We can schedule a training session for next week, or the following.
+·         We need to keep the sbs.utep.edu URL. We’ll do that.
+·         Who will be responsible for redirecting all URL’s to our new website? I’ll work with IT to redirect this url to the new DNN site.
