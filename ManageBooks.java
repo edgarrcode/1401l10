@@ -201,7 +201,8 @@ public class ManageBooks {
      * the resulting list is sorting in ascending chronological order.
      *********************************************************************/
     /*public static void chronoLLinsert(BooksLL myBooks, Book B) {
-           // add your code here    
+           // add your code here
+
     }*/
     
      /*********************************************************************
@@ -264,15 +265,9 @@ public class ManageBooks {
 
         //bonus2
         System.out.println("\n_____________________");
-        System.out.println("Creating newBookForNth:");
-        BooksLL newBookForNth = new BooksLL(myBooks[0],null);
-        System.out.println("newBookForNth:\n");
-        newBookForNth.printLL();
-
         System.out.println("Enter nth");
         int nth = scnr.nextInt();
-        myListOfBooks.addNth(newBookForNth, nth);
-        System.out.println(myListOfBooks.sizeLLR());
+        myListOfBooks.addNth(myBooks[0], nth);
         myListOfBooks.printLL();
 
 
