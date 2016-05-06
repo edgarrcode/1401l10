@@ -110,26 +110,26 @@ public class BooksLL {
     // than the size of the list + 1).
     public void addNth (BooksLL B, int n) {
         int sizeOfThisList = this.sizeLLR();
-        BooksLL tempCurr = null;
+        BooksLL temp = this;
 
         if (n > sizeOfThisList) {
             addTail(B);
         }
         else if (n == 1) {
             //add head
-            B.setNext(this);
+            B.next = temp;
+            temp.next = B;
+            temp.printLL();
         }
         else {
             //iterate
             for (int i = 2; i < n; i++) {
                 System.out.println("enteredfor");
-                tempCurr = next;
+                temp = temp.next;
             }
             //insert
-            System.out.println("exitedfor. tempCurr:"); tempCurr.printLL();
-            System.out.println("---");;
-            B.setNext(tempCurr.next);
-            tempCurr.setNext(B);
+            B.setNext(temp.next);
+            temp.setNext(B);
         }
 
     }
