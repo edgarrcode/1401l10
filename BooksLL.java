@@ -111,15 +111,15 @@ public class BooksLL {
     public void addNth (BooksLL B, int n) {
         int sizeOfThisList = this.sizeLLR();
         BooksLL temp = this;
+        System.out.println("this:");
+        this.printLL();
 
         if (n > sizeOfThisList) {
             addTail(B);
         }
         else if (n == 1) {
             //add head
-            B.next = temp;
-            temp.next = B;
-            temp.printLL();
+            B.setNext(this);
         }
         else {
             //iterate

@@ -263,7 +263,7 @@ public class ManageBooks {
         myListOfBooks.printLL();
 
         //bonus2
-        /*System.out.println("\n_____________________");
+        System.out.println("\n_____________________");
         System.out.println("Creating newBookForNth:");
         BooksLL newBookForNth = new BooksLL(myBooks[0],null);
         System.out.println("newBookForNth:\n");
@@ -273,7 +273,7 @@ public class ManageBooks {
         int nth = scnr.nextInt();
         myListOfBooks.addNth(newBookForNth, nth);
         System.out.println(myListOfBooks.sizeLLR());
-        myListOfBooks.printLL();*/
+        myListOfBooks.printLL();
 
 
     }
